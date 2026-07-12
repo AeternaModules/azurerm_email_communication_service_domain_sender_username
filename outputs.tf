@@ -1,3 +1,7 @@
+output "email_communication_service_domain_sender_usernames_id" {
+  description = "Map of id values across all email_communication_service_domain_sender_usernames, keyed the same as var.email_communication_service_domain_sender_usernames"
+  value       = { for k, v in azurerm_email_communication_service_domain_sender_username.email_communication_service_domain_sender_usernames : k => v.id }
+}
 output "email_communication_service_domain_sender_usernames_display_name" {
   description = "Map of display_name values across all email_communication_service_domain_sender_usernames, keyed the same as var.email_communication_service_domain_sender_usernames"
   value       = { for k, v in azurerm_email_communication_service_domain_sender_username.email_communication_service_domain_sender_usernames : k => v.display_name }
